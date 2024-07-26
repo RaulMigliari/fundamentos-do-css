@@ -1,0 +1,39 @@
+/*Pinta o segundo filho de li de #f00*/
+li:nth-child(2) {
+    color: #f00;
+}
+
+/*Pinta os filhos múltiplos de 3 de li de #00f*/
+li:nth-child(3n) {
+    color: #00f;
+}
+
+/*Ao passar o mouse por cima de um elementod de li, ele ganha o background-color: #999*/
+li:hover {
+    background-color: #999;
+}
+
+/*Define que o elemento "(antes)" irá aparecer atrás dos elementos de li*/
+li::before {
+  content: "(antes) ";
+}
+
+/*Define que o elemento "(depois)" irá aparecer depois dos elementos de li*/
+li::after {
+  content: " (depois)";
+}
+
+/*Define que o primeiro filho de li ganhará a cor rgb(255, 174, 0)*/
+li:first-child {
+    color: rgb(255, 174, 0);
+}
+
+/*Define que o último filho de li ganhará a cor rgb(255, 0, 179)*/
+li:last-child {
+    color: rgb(255, 0, 179);
+}
+
+/*Define que todos os elementos de li, menos o primeiro, ganharão a cor rgb(0, 255, 255)*/
+li:not(:first-child) {
+    color: rgb(0, 255, 255);
+}
